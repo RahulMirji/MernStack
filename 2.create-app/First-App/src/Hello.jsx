@@ -1,6 +1,13 @@
 function Hello(){
+  let myName = 'Rahul Mirji';
+  let fullName = () => {
+    return 'Rahul Mirji'
+  }
+  let number = 45999;
   return <h3>
-    Hello this is Rahul
+    Hey this is {myName}
+    This is {fullName()}
+    <p>MessageNo:{number}</p>
   </h3>
 
 }
