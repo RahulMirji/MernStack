@@ -1,17 +1,20 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import FoodItems from "./component/foodItems";
+import ErrorMessage from "./component/ErrorMessage";
+import Item from "./component/Item";
 
-function App(){
+function App() {
+  // let foodItems =[];
+  let foodItems = ["Sabji", "Ghee", "Roti", "Chapati", "Fruits"];
 
-  let foodItems = ["Milk","Ghee","Roti","Chapati","Fruits"]
-
-  return (<>  <h1>Healthy food</h1>
-  <ul className="list-group container">
-
-  {foodItems.map(item =><li key={item} className="list-group-item">{item}</li>)}
-  
-  
-</ul></>
+  return (
+    <>
+      <h1>Healthy food</h1>
+      <Item></Item>
+      <FoodItems items={foodItems}></FoodItems>
+      <ErrorMessage items={foodItems}></ErrorMessage>
+    </>
   );
 }
 
