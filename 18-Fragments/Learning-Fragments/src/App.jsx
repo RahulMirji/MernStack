@@ -10,18 +10,12 @@ function App() {
   let foodItems = ["Sabji", "Ghee", "Roti", "Chapati", "Fruits"];
 
   return (
-    <>
     <Container>
       <h1>Healthy food</h1>
       <Item></Item>
       <FoodItems items={foodItems}></FoodItems>
       <ErrorMessage items={foodItems}></ErrorMessage>
     </Container>
-    <Container>
-      <p>The above list of Items are good for health and well being. You try on and share you experince</p>
-    </Container>
-    </>
-
   );
 }
 
