@@ -2,4 +2,9 @@
   margin: 10px;
   width: 175px;
   font-size: 25px;
+  
+}
+
+.displayBack{
+  background: linear-gradient(180deg, #4b494865 0%, #22222287 100%);
 }
