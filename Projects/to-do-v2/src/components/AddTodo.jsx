@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { RiFileAddFill } from "react-icons/ri";
 
 function AddTodo({ onNewItem }) {
   const [todoName, setTodoName] = useState("");
@@ -35,7 +36,7 @@ function AddTodo({ onNewItem }) {
             className="btn btn-success kg-button"
             onClick={handleAddButtonClicked}
           >
-            Add
+            <RiFileAddFill></RiFileAddFill>
           </button>
         </div>
       </div>
