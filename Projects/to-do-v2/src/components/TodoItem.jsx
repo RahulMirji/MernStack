@@ -12,7 +12,7 @@ function TodoItem({ todoName, todoDate, onDeleteClick }) {
             className="btn btn-danger kg-button"
             onClick={() => onDeleteClick(todoName)}
           >
-            <RiDeleteBinLine></RiDeleteBinLine>
+            
           </button>
         </div>
       </div>
