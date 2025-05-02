@@ -1,45 +1,37 @@
-import { useState } from "react";
+import { useState, useRef, use } from "react";
 import { RiFileAddFill } from "react-icons/ri";
 
 function AddTodo({ onNewItem }) {
-  const [todoName, setTodoName] = useState("");
-  const [dueDate, setTodoDate] = useState("");
+  const todoNameElement = useRef();
+  const dueDateElement = useRef();
 
-  const handleNameChange = (event) => {
-    setTodoName(event.target.value);
-  };
-  const handleDateChange = (event) => {
-    setTodoDate(event.target.value);
-  };
-  const handleAddButtonClicked = () => {
+  const handleAddButtonClicked = (event) => {
+    event.preventDefault();
+    const todoName = todoNameElement.current.value;
+    const dueDate = dueDateElement.current.value;
+    todoNameElement.current.value = "";
+    dueDateElement.current.value = "";
     onNewItem(todoName, dueDate);
-    setTodoName("");
-    setTodoDate("");
   };
   return (
     <div className="container">
-      <div className="row kg-row">
+      <form className="row kg-row" onSubmit={handleAddButtonClicked}>
         <div className="col-6">
           <input
             type="text"
+            ref={todoNameElement}
             placeholder="Enter todo items here"
-            value={todoName}
-            onChange={handleNameChange}
           />
         </div>
         <div className="col-4">
-          <input type="date" value={dueDate} onChange={handleDateChange} />
+          <input type="date" ref={dueDateElement} />
         </div>
         <div className="col-2">
-          <button
-            type="button"
-            className="btn btn-success kg-button"
-            onClick={handleAddButtonClicked}
-          >
+          <button type="submit" className="btn btn-success kg-button">
             <RiFileAddFill></RiFileAddFill>
           </button>
         </div>
-      </div>
+      </form>
     </div>
   );
 }
