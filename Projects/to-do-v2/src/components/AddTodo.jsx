@@ -1,9 +1,11 @@
+import { TodoItemContext } from "../store/todoItemsStore";
 import { useState, useRef, use } from "react";
 import { RiFileAddFill } from "react-icons/ri";
 
-function AddTodo({ onNewItem }) {
-  const todoNameElement = useRef();
-  const dueDateElement = useRef();
+function AddTodo({}) {
+  const { addNewItem } = useContext(TodoItemContext);
+  const todoNameElement = useState();
+  const dueDateElement = useState();
 
   const handleAddButtonClicked = (event) => {
     event.preventDefault();
@@ -11,7 +13,7 @@ function AddTodo({ onNewItem }) {
     const dueDate = dueDateElement.current.value;
     todoNameElement.current.value = "";
     dueDateElement.current.value = "";
-    onNewItem(todoName, dueDate);
+    addNewItem(todoName, dueDate);
   };
   return (
     <div className="container">
