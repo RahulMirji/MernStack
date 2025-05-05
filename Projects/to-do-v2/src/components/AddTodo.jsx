@@ -30,7 +30,7 @@ function AddTodo({}) {
         </div>
         <div className="col-2">
           <button type="submit" className="btn btn-success kg-button">
-            
+            <RiFileAddFill></RiFileAddFill>
           </button>
         </div>
       </form>
