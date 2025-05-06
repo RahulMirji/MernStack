@@ -5,8 +5,12 @@ import Footer from "./components/Footer";
 import Sidebar from "./components/SideBar";
 import CreatePost from "./components/CreatePost";
 import PostList from "./components/PostList";
+import { useState } from "react";
 
 function App() {
+
+  const [seletedTab, setSelectedTab] = useState("Home");
+  
   return (
     <>
       <div className="app-container">
