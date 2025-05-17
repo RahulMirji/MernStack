@@ -78,4 +78,4 @@ const Controls = () => {
   );
 };
 
-export default ;
+export default Controls;
