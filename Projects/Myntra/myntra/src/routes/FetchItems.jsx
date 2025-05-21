@@ -12,8 +12,6 @@ const FetchItems = () => {
   fetch("http://localhost:8080/items", { signal })
     .then((res) => res.json())
     .then((data) => {
-      addInitialPosts(data.posts);
-      setFetching(false);
     });
     return()=> {
       console.log("cleaning up Useeffect.");
