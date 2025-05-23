@@ -24,6 +24,6 @@ const fetchStatusSlice = createSlice({
 });
 
 export const fetchStatusSliceActions = fetchStatusSlice.actions;
- export default fetchStatusSlice;
+export default fetchStatusSlice;
 
  

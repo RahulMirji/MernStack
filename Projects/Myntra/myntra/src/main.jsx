@@ -7,6 +7,9 @@ import Bag from "./routes/Bag.jsx";
 import Home from "./routes/Home.jsx";
 import { Provider } from "react-redux";
 import myntraStore from "./store/index.js";
+import "bootstrap/dist/css/bootstrap.min.css";
+import OrderConfirmation from "./components/OrderConfirmation.jsx";
+
 
 const router = createBrowserRouter([
   {
@@ -20,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "/bag",
         element: <Bag />,
+      },
+      {
+        path: "/order-confirmation", // ← New route
+        element: <OrderConfirmation />,
       },
     ],
   },

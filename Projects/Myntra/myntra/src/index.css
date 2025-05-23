@@ -381,3 +381,16 @@ a.action_container:link {
   cursor: pointer;
 }
 
+.order-heading{
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+
+.payment-not{
+  margin-bottom: 30px;
+}
+
+.thank{
+  font-size: 20px;
+   margin-bottom: 60px;
+}
